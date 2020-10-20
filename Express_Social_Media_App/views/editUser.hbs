@@ -1,0 +1,30 @@
+<h1>User Info:</h1>
+<h1> {{userData.FirstName}} {{userData.LastName}} </h1>
+<h3>User Id: {{userData.UserId}} </h3>
+<h3>Username: {{userData.Username}} </h3>
+<h3>Email: {{userData.Email}}</h3>
+
+<br/>
+<br/>
+
+    <h2>User Posts:</h2>
+    <ul>
+        {{#each userData.posts}}
+        <li>
+            <h4>{{PostTitle}}</h4>
+            <p>Deleted Status: {{Deleted}}</p>
+            <form method="POST" action="/posts/admin/deletePost/{{PostId}}">
+            <input type="submit" value="Delete Post">
+            </form>
+        </li>
+        {{/each}}
+    </ul>
+<br>
+
+<form method="POST" action="/users/admin/delete/{{userData.UserId}}">
+    <input type="submit" value="Delete User">
+</form>
+<br>
+<br>
+<a href="/users/admin">Back</a>
+<a href="/users/logout">Logout</a>

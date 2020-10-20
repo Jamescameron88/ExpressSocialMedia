@@ -1,0 +1,21 @@
+<h2>{{post.PostTitle}}</h2>
+
+<form method="POST" action="/posts/editPost/{{post.PostId}}">
+<h2>Edit Post</h2>
+    <input class="title" name="postTitle" type="text" value="{{post.PostTitle}}">
+    <br/>
+    <input class="body" name="postBody" type="text" value="{{post.PostBody}}">
+    <br>
+    <br>
+    <input type="submit" value="Update Post">
+</form>
+<form method="POST" action="/posts/deletePost/{{post.PostId}}">
+       <input type="submit" value="Delete Post (by User)">
+</form>
+<form method="POST" action="/posts/admin/deletePost/{{post.PostId}}">
+       <input type="submit" value="Delete Post (by Admin)">
+</form>
+
+<br>
+<a href="/users/profile">Back</a>
+<a href="/users/logout">Logout</a>

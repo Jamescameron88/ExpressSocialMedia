@@ -1,0 +1,31 @@
+@font-face {
+  font-family: Hackerillo;
+  src: url(./hacker.otf);
+}
+
+body {
+  color: #149414;
+  background-color: black;
+  padding: 50px;
+  font-family: Hackerillo;
+  font: 14px ;
+  padding-top: 8em;
+  text-align: center;
+  width: 80%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input {
+  background-color: #9ccc9c;
+}
+
+button {
+  background-color: #9ccc9c;
+}
+
+a {
+  color: rgb(170, 197, 19);
+}

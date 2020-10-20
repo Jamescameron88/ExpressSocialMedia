@@ -1,0 +1,27 @@
+<div id="div1">
+    <h2>{{FirstName}} {{LastName}}</h2>
+
+    <h1>Add Post:</h1>
+
+    <div id="div2">
+        <form id="post" name="createPost" method="POST" action="/posts/createPost">
+    <div>
+        <label for="name">Title: </label>
+        <input type="text" name="postTitle" required>
+    </div>
+    <div>
+        <label for="name">Post: </label>
+        <input type="text" name="postBody" required>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+    </form>
+    </div>
+
+</div>
+
+<br/>
+<br/>
+<a href="/users/profile">Back</a>
+<a href="/users/logout">Logout</a>

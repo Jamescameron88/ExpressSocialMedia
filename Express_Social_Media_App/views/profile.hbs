@@ -1,0 +1,23 @@
+<div id="div1">
+<h1>Profile</h1>
+<h2>{{userData.FirstName}} {{userData.LastName}} </h2>
+<h3>Username: {{userData.Username}} </h3>
+<div
+<h2>Posts:</h2>
+<ul style="list-style-type:none;">
+    {{#each userData.posts}}
+    <li>
+        <form method="GET" action="/posts/editPost/{{PostId}}">
+            <a href="/posts/editPost/{{PostId}}">{{PostTitle}}</a>
+        </form>
+    </li>
+    {{/each}}
+   
+</ul>
+ <h4>Edit/Delete</h4>
+ </div>
+</div>
+<br>
+<a href="/posts/createPost">Create Post</a>
+<a href="/users/logout">Logout</a>
+<a href="/users/admin">Admin View</a>
